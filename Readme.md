@@ -7,7 +7,7 @@ This image sets up the environment to clone and run a wordpress archive created 
 Download the template files, which contains a docker-compose file and the project structure.
 
 ```bash
-$ curl -L https://github.com/drlogout/wordpress-duplicator/blob/v1.0.0/duplicator-template.tar.gz\?raw\=true | tar xz
+$ curl -L https://github.com/jdayton3/wordpress-duplicator/blob/v1.0.0/duplicator-template.tar.gz\?raw\=true | tar xz
 ```
 
 Rename the folder.
@@ -40,3 +40,7 @@ Enter the database settings as shown in the image below:
 For devlopment you may want to disable opcache. You can add the following line to the htaccess file in `wpclone/wordpress/.htaccess`:
 
 `php_flag opcache.enable Off`
+
+## Other
+
+I haven't had much success getting the hostname to change automatically.  If you have the same problem after installation, log into the PHPMyAdmin instance (by default at http://localhost:8180) and edit the values in the wp_options table.
